@@ -3,13 +3,13 @@ function isPrime(num) {
     return false;
   }
 
-  for (let i = 2; i < Math.sqrt(num); i++) {
+  for (let i = 2; i <= Math.sqrt(num); i++) {
     if (num % i === 0) {
       return false;
-    } else {
-      return true;
-    }
+    } 
+    
   }
+  return true;
 }
 
 console.log(isPrime(1));
