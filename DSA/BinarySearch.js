@@ -4,12 +4,17 @@ function binarySearch(arr,tar){
 
 while(leftIndex <= rightIndex){
   let midIndex = Math.floor((leftIndex + rightIndex) / 2);
-}
-if(arr.length === 0) return -1;
+  if(tar === arr[midIndex]){
+    return midIndex
+  }
 
-if(arr.length > 0){
-
+  if(tar < arr[midIndex]){
+    rightIndex = midIndex - 1;
+  } else {
+    leftIndex = midIndex + 1
+  }
 }
+return -1;
 }
 console.log(binarySearch([10, 20, 30, 40, 50], 30));
-console.log(binarySearch([10, 20, 30, 40, 50], 50));
+console.log(binarySearch([10, 20, 30, 40, 50], 60));
